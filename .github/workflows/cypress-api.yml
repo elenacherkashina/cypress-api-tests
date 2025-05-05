@@ -18,6 +18,6 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           start: echo "No app to start"
-          command: npx cypress run --spec "cypress/e2e/api_tests.cy.js"
+          command: npx cypress run
         env:
           REQRES_API_KEY: ${{ secrets.REQRES_API_KEY }}
