@@ -24,3 +24,5 @@ jobs:
 
       - name: Run Cypress tests
         run: npx cypress run --spec 'cypress/e2e/api_tests.cy.js'
+        env:
+          REQRES_API_KEY: ${{ secrets.REQRES_API_KEY }}

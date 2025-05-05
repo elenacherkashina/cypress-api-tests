@@ -12,7 +12,7 @@ describe('Reqres API Tests', () => {
         method: 'GET',
         url: '/api/users/23',
         headers: {
-            'x-api-key': 'reqres-free-v1'
+            'x-api-key': process.env.REQRES_API_KEY
           },
         failOnStatusCode: false
       }).then((response) => {
@@ -25,7 +25,7 @@ describe('Reqres API Tests', () => {
         method: 'POST',
         url: '/api/users',
         headers: {
-          'x-api-key': 'reqres-free-v1',
+          'x-api-key': process.env.REQRES_API_KEY,
           'Content-Type': 'application/json'
         },
         body: {
