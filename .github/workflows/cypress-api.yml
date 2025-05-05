@@ -19,10 +19,10 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Install dependencies
-        run: npm install
+      - name: Install dependencies (force Cypress binary)
+        run: npm install --force
 
-      - name: Run Cypress tests
+      - name: Run Cypress in headless mode
         run: npx cypress run --spec 'cypress/e2e/api_tests.cy.js'
         env:
           REQRES_API_KEY: ${{ secrets.REQRES_API_KEY }}
