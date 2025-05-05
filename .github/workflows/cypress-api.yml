@@ -19,8 +19,11 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Install dependencies (force Cypress binary)
-        run: npm install --force
+      - name: Install dependencies (without running postinstall)
+        run: npm install --ignore-scripts
+
+      - name: Install Cypress binary manually
+        run: npx cypress install
 
       - name: Run Cypress in headless mode
         run: npx cypress run --spec 'cypress/e2e/api_tests.cy.js'
