@@ -8,6 +8,7 @@ describe('Reqres API Tests', () => {
   
   
     it('GET single user - not found', () => {
+      console.log('🔍 API KEY:', process.env.REQRES_API_KEY);
       cy.request({
         method: 'GET',
         url: '/api/users/23',
@@ -21,6 +22,7 @@ describe('Reqres API Tests', () => {
     });
 
     it('POST create user', () => {
+      console.log('🔍 API KEY:', process.env.REQRES_API_KEY);
       cy.request({
         method: 'POST',
         url: '/api/users',
