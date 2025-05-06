@@ -18,4 +18,4 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           start: echo "No app to start"
-          command: npx cypress run --env reqresApiKey=${{ secrets.REQRES_API_KEY }}
+          command: npx cypress run --env reqresApiKey=reqres-free-v1

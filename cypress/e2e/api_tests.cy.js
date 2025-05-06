@@ -8,6 +8,7 @@ describe('Reqres API Tests', () => {
   
   
     it('GET single user - not found', () => {
+      console.log('ENV VALUE IN CI:', Cypress.env('reqresApiKey'));
       cy.request({
         method: 'GET',
         url: '/api/users/23',
@@ -21,6 +22,7 @@ describe('Reqres API Tests', () => {
     });
 
     it('POST create user', () => {
+      console.log('ENV VALUE IN CI:', Cypress.env('reqresApiKey'));
       cy.request({
         method: 'POST',
         url: '/api/users',
