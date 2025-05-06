@@ -1,0 +1,2 @@
+# Cypress local secrets
+cypress.env.json
