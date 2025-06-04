@@ -34,10 +34,12 @@ describe('Reqres API Tests', () => {
           name: 'Eve',
           job: 'QA Lead'
         }
-      }).then((response) => {
-        expect(response.status).to.eq(201);
-        expect(response.body).to.have.property('id');
-        expect(response.body).to.have.property('createdAt');
+        }).then((response) => {
+          expect(response.status).to.eq(201);
+          expect(response.body).to.have.property('id');
+          expect(response.body).to.have.property('createdAt');
+          expect(response.body.name).to.eq('Eve');
+          expect(response.body.job).to.eq('QA Lead');
+        });
       });
     });
-  });
